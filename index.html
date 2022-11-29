@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="timer-main">
+    <div class="timer">
+        <div class="limited-offer-text">
+            <div><img class="clock-img" src="https://i.ibb.co/NWdZqN1/clock.png"></div>
+            &nbsp;
+            <div>LIMITED TIME OFFER</div>
+        </div>
+        <div class="line-break"></div>
+        <div>Ends In : <span id="timer">1:30:00</span></div> 
+        <div class="timer-coupon">GET 10% OFF Use Code : EXAMSTART &nbsp; &nbsp;</div>
+    </div>
+    </div>
+
+    <script>
+        window.onload = function(){
+    var hou = 1;
+    var min = 30;
+    var sec = 10;
+    setInterval(function(){
+        document.getElementById("timer").innerHTML = hou.toString().padStart(2, 0) + ":" + min.toString().padStart(2, 0) + ":" + sec.toString().padStart(2, 0) ;
+        
+        if(sec==0){
+            if(min!=0){
+                min--;
+                sec = 60;   
+            }
+            else if(hou!=0){
+                hou--;
+                min=60;
+                sec=60;
+            }
+            else{
+                 hou = 1;
+                 min = 30;
+                sec = 0;  
+            }
+          
+        }
+        sec--;
+        },1000);
+}
+
+    </script>
+</body>
+</html>

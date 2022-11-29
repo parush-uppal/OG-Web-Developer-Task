@@ -1,0 +1,58 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.timer-main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    -webkit-align-items: center;
+}
+.timer{
+    display: flex;
+    width: 95%;
+    height: 3rem;
+    justify-content: space-between;
+    background-color: orange;
+    border-radius: 25px;
+    align-items:center
+}
+.line-break {
+    display: none;
+}
+.clock-img{
+    height: 4rem;
+    width: 4rem;
+}
+.limited-offer-text{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    -webkit-align-items: center;
+}
+
+@media  (max-width: 600px) {
+    .timer{
+        flex-direction: column;
+        height: 6rem;
+        border-radius: 0px;
+        background-color :rgba(255,235,198,255);
+        border: 2px solid #ffdb8b;
+    }
+    .timer-coupon{
+        background-color: rgba(255,211,108,255);
+        text-align: center;
+        justify-content: center;
+        width: 100%;
+    }
+    .line-break{
+        display: inline;
+        width: 135px;
+        height: 1px;
+        background: #4c4b4e;
+    }
+    .clock-img{
+        height: 2rem;
+        width: 2rem;
+    }
+}
